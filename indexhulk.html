@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hulk: El Héroe mas fuerte que existe</title>
+    <link rel="stylesheet" href="stylehulk.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hulk: El Héroe mas fuerte que existe</h1>
+        <p>
+            <img src="hulk.JFIF" alt="Hulk" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </p>
+        <p>
+            Hulk, también conocido como Bruce Banner, es uno de los superhéroes más icónicos de Marvel. Creado por Stan Lee y Jack Kirby, 
+            apareció por primera vez en el cómic *The Incredible Hulk #1*, publicado en mayo de 1962. Inspirado por la combinación de 
+            *Dr. Jekyll y Mr. Hyde* y el clásico monstruo de Frankenstein, Hulk fue diseñado para explorar la dualidad de la naturaleza humana: 
+            la lucha interna entre la razón y la ira.
+        </p>
+        <p>
+            El Dr. Bruce Banner se transformó en Hulk tras un experimento fallido con radiación gamma, convirtiéndose en una figura de fuerza 
+            imparable cuando se enfurece. Esta dualidad entre científico brillante y bestia incontrolable es una de las características 
+            principales del personaje.
+        </p>
+        <p>Conoce las versiones más poderosa y más débil de Hulk.</p>
+        <button onclick="showPowerfulHulk()">Versión Más Poderosa</button>
+        <button onclick="showWeakHulk()">Versión Más Débil</button>
+        <div id="info"></div>
+    </div>
+
+    <script>
+        function showPowerfulHulk() {
+            document.getElementById('info').innerHTML = `
+                <h2>Hulk Maestro</h2>
+                <p>La versión más poderosa de Hulk es Hulk Maestro. En un futuro postapocalíptico, absorbe radiación y se convierte en un ser increíblemente inteligente y fuerte.</p>
+                <img src="hulk maestro.jpg" alt="Hulk Maestro" style="max-width: 100%; height: auto;">
+            `;
+        }
+
+        function showWeakHulk() {
+            document.getElementById('info').innerHTML = `
+                <h2>Grey Hulk</h2>
+                <p>La versión más débil de Hulk es el Hulk Gris. Aunque sigue siendo fuerte, tiene menos poder físico en comparación con otras versiones y su carácter es más astuto y menos impulsivo.</p>
+                <img src="grey hulk.jpg" alt="Gray Hulk" style="max-width: 100%; height: auto;">
+            `;
+        }
+    </script>
+</body>
+</html>
