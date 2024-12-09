@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piltover - La Ciudad del Progreso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3c3f41, #2e2a27);
+            color: #e8c36d;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #1f1b16;
+            color: #e8c36d;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #745c2e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Uncial Antiqua', cursive;
+            font-size: 3em;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px #745c2e;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 5px;
+            color: #d4af37;
+        }
+
+        /* Contenedor principal */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: #1f1b16;
+            border-radius: 15px;
+            border: 2px solid #745c2e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .info-section h2 {
+            color: #d4af37;
+            border-bottom: 3px solid #e8c36d;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-family: 'Uncial Antiqua', cursive;
+        }
+
+        button {
+            background-color: #e8c36d;
+            color: #1f1b16;
+            border: 2px solid #745c2e;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Orbitron', sans-serif;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover {
+            background-color: #d4af37;
+            transform: scale(1.05);
+        }
+
+        #dato {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #e8c36d;
+            background: #2e2a27;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #745c2e;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Carrusel */
+        .carousel {
+            margin-top: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            border: 2px solid #745c2e;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(36, 29, 22, 0.8);
+            color: #d4af37;
+            border: 2px solid #745c2e;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .carousel button:hover {
+            background-color: rgba(50, 40, 30, 1);
+        }
+
+        .carousel .prev {
+            left: 10px;
+        }
+
+        .carousel .next {
+            right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2e2a27;
+            margin-top: 20px;
+            border-top: 2px solid #745c2e;
+            font-size: 0.9em;
+            color: #e8c36d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Piltover</h1>
+        <p>La Ciudad del Progreso en Runaterra</p>
+    </header>
+    <main>
+        <div class="info-section">
+            <h2>¿Qué es Piltover?</h2>
+            <p>Piltover es una ciudad-estado situada en Runaterra, conocida como el centro del comercio, la innovación tecnológica y la cultura. Su arquitectura imponente y su avanzada tecnología hextech la convierten en una joya entre las naciones.</p>
+        </div>
+        <div class="info-section">
+            <h2>Datos Curiosos</h2>
+            <p>Presiona el botón para descubrir datos interesantes sobre Piltover.</p>
+            <button onclick="mostrarDato()">Mostrar Dato</button>
+            <p id="dato"></p>
+        </div>
+        <div class="info-section carousel">
+            <h2>Personajes Representativos</h2>
+            <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+            <img id="personaje" src="Imagenes_Piltover\\Camille.jpg",
+            alt="Camille">
+            <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
+        </div>
+    </main>
+    <footer>
+        <p>Creado por Hernandez Aviles Raul</p>
+    </footer>
+    <script>
+        const datos = [
+            "Piltover es conocida como 'La Ciudad del Progreso' por su innovación tecnología hextech.",
+            "La tecnología Hextech, desarrollada en Piltover, utiliza cristales mágicos para alimentar máquinas avanzadas.",
+            "Piltover comparte su frontera con Zaun, una ciudad subterránea marcada por el caos y la contaminación.",
+            "Los inventores de Piltover son famosos en todo Runaterra por sus innovaciones.",
+            "El puente Hexgate conecta a Piltover con otras regiones, permitiendo un flujo constante de comercio."
+        ];
+
+        function mostrarDato() {
+            const indice = Math.floor(Math.random() * datos.length);
+            document.getElementById("dato").innerText = datos[indice];
+        }
+
+        // Carrusel
+        const imagenes = [
+    "C:Imagenes_Piltover\\Camille.jpg",
+    "C:Imagenes_Piltover\\Jayce.jpg",
+    "C:Imagenes_Piltover\\Viktor.jpg",
+    "C:Imagenes_Piltover\\Blitzcrank.jpg",
+    "C:Imagenes_Piltover\\Orianna.jpg",
+    "C:Imagenes_Piltover\\Ezreal.jpg"
+];
+let indiceActual = 0;
+
+function cambiarImagen(direccion) {
+    indiceActual = (indiceActual + direccion + imagenes.length) % imagenes.length;
+    document.getElementById("personaje").src = imagenes[indiceActual];
+    document.getElementById("personaje").alt = imagenes[indiceActual].split('\\').pop().split('.')[0];
+}
+    </script>
+</body>
+</html>
