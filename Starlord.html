@@ -142,9 +142,94 @@
             color: #00e5ff;
             font-size: 0.9em;
         }
+
+              /* Estilos de Navegación */
+       .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .nav-toggle {
+            background-color: #0b3d91;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-toggle:hover {
+            transform: rotate(90deg);
+        }
+
+        .nav-menu {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            width: 200px;
+        }
+
+        .nav-toggle:focus + .nav-menu,
+        .nav-menu:hover {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #0b3d91;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 <body>
+
+     <!-- Navegación -->
+     <div class="nav-container">
+        <button class="nav-toggle" aria-label="Menú de navegación">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <div class="nav-menu">
+          <a href="PaginaPiltover.html">Otra Página</a>
+          <a href="HUB.html">Hub</a>
+        </div>
+      </div>
+
     <header>
         <h1>Star-Lord</h1>
         <p>El Legendario Outlaw del Espacio</p>
