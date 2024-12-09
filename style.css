@@ -1,0 +1,47 @@
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-image: url('fondo\ halo.jpg'); /* Reemplaza con una imagen de fondo temática de Halo */
+            background-size: cover;
+            background-position: center;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(52, 58, 64, 0.9);
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        main {
+            padding: 20px;
+        }
+        .btn-custom {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .main-image {
+            margin: 20px auto;
+            display: block;
+            max-width: 50%;
+            height: auto;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
