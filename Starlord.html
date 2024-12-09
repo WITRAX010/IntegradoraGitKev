@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star-Lord - Guardian de la Galaxia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0b0e2e, #1a2951, #050a1a);
+            color: #00e5ff;
+            overflow-x: hidden;
+        }
+
+        /* Encabezado */
+        header {
+            background: radial-gradient(circle at center, #131862, #060b22);
+            text-align: center;
+            padding: 20px;
+            color: #ffcc00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #00e5ff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Russo One', sans-serif;
+            font-size: 3em;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px #ffcc00, 0 0 30px #00e5ff;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        /* Contenedor principal */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: rgba(5, 10, 30, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .info-section h2 {
+            color: #ffcc00;
+            border-bottom: 3px solid #00e5ff;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-family: 'Russo One', sans-serif;
+            text-shadow: 0 0 10px #ffcc00;
+        }
+
+        button {
+            background-color: #00e5ff;
+            color: #060b22;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Russo One', sans-serif;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px #00e5ff;
+        }
+
+        button:hover {
+            background-color: #ffcc00;
+            color: #131862;
+            transform: scale(1.1);
+        }
+
+        #dato {
+            margin-top: 10px;
+            font-size: 1.1em;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-shadow: 0 0 5px #00e5ff;
+        }
+
+        /* Carrusel */
+        .carousel {
+            margin-top: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .carousel img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            border: 2px solid #00e5ff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+        }
+
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(5, 10, 50, 0.8);
+            color: #00e5ff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 18px;
+        }
+
+        .carousel button:hover {
+            background-color: #131862;
+            color: #ffcc00;
+        }
+
+        .carousel .prev {
+            left: 10px;
+        }
+
+        .carousel .next {
+            right: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #060b22;
+            margin-top: 20px;
+            border-top: 2px solid #00e5ff;
+            color: #00e5ff;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Star-Lord</h1>
+        <p>El Legendario Outlaw del Espacio</p>
+    </header>
+    <main>
+        <div class="info-section">
+            <h2>¿Quién es Star-Lord?</h2>
+            <p>Peter Quill, mejor conocido como Star-Lord, es un pirata espacial, mitad humano y spartoi, líder de los Guardianes de la Galaxia. Su amor por la música de los años 80 lo convierte en un héroe único en el universo Marvel.</p>
+        </div>
+        <div class="info-section">
+            <h2>Datos Curiosos</h2>
+            <p>Presiona el botón para descubrir curiosidades sobre Star-Lord y los Guardianes de la Galaxia.</p>
+            <button onclick="mostrarDato()">Mostrar Dato</button>
+            <p id="dato"></p>
+        </div>
+        <div class="info-section carousel">
+            <h2>Personajes Clave</h2>
+            <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+            <img id="personaje" src="Imagenes_GOTG\\Starlord.jpg" alt="Star-Lord">
+            <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
+        </div>
+    </main>
+    <footer>
+        <p>Guardianes de la Galaxia © Marvel</p>
+    </footer>
+    <script>
+        const datos = [
+            "Star-Lord fue abducido por los Ravagers cuando era un niño.",
+            "Su Walkman es uno de sus objetos más preciados, lleno de música de los 80.",
+            "Los Guardianes de la Galaxia incluyen a Groot, Rocket, Gamora y Drax.",
+            "El Milano es la nave icónica que pilota Star-Lord.",
+            "Su máscara le permite respirar en el espacio y ofrece visión avanzada."
+        ];
+
+        function mostrarDato() {
+            const indice = Math.floor(Math.random() * datos.length);
+            document.getElementById("dato").innerText = datos[indice];
+        }
+
+        const imagenes = [
+            "Imagenes_GOTG\\Starlord.jpg",
+            "Imagenes_GOTG\\rocket.jpg",
+            "Imagenes_GOTG\\Gamora.jpg",
+            "Imagenes_GOTG\\drax.jpg",
+            "Imagenes_GOTG\\groot.jpg"
+        ];
+        let indiceActual = 0;
+
+        function cambiarImagen(direccion) {
+            indiceActual = (indiceActual + direccion + imagenes.length) % imagenes.length;
+            document.getElementById("personaje").src = imagenes[indiceActual];
+            document.getElementById("personaje").alt = imagenes[indiceActual].split('\\').pop().split('.')[0];
+        }
+    </script>
+</body>
+</html>
