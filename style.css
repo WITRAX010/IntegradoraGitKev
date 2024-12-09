@@ -1,91 +1,47 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('imagenes/fondo-halo.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #f1f1f1;
-}
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #00d4ff;
-    border-bottom: 2px solid #00d4ff;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(44, 47, 51, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.rango {
-    margin: 20px 0;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #00d4ff;
-    border-radius: 5px;
-    background-color: rgba(58, 63, 68, 0.9);
-    cursor: pointer;
-    overflow: hidden; /* Para evitar que los elementos sobresalgan */
-}
-
-.rango-img {
-    max-width: 150px;
-    margin: 0 auto 10px auto;
-    transition: transform 0.3s ease;
-}
-
-.rango h3 {
-    margin: 0;
-    color: #00ff7f;
-}
-
-.subrangos {
-    display: none;
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-figure {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    max-width: 100px;
-}
-
-figure img {
-    width: 100%;
-    border-radius: 5px;
-    border: 2px solid #00d4ff;
-}
-
-figcaption {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #f1f1f1;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
-    margin-top: 20px;
-}
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-image: url('fondo\ halo.jpg'); /* Reemplaza con una imagen de fondo temática de Halo */
+            background-size: cover;
+            background-position: center;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: rgba(52, 58, 64, 0.9);
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        main {
+            padding: 20px;
+        }
+        .btn-custom {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .main-image {
+            margin: 20px auto;
+            display: block;
+            max-width: 50%;
+            height: auto;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
