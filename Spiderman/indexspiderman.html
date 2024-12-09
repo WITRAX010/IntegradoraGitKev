@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiderman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('fondospiderman.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #fff;
+        }
+        header {
+            background: linear-gradient(90deg, #e00031, #e22d45);
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            width: auto;
+            height: 150px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin: 10px;
+        }
+        footer {
+            background-color: #111;
+            color: #bbb;
+            text-align: center;
+            padding: 10px;
+        }
+        .form-group input {
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .actor-history {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        .actor-history h3 {
+            color: #e00031;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="spiderman33.png" alt="Logo de Fortnite" style="height: 800px;">
+    <h1>Spiderman - Actores</h1>
+</header>
+
+<section>
+    <h2 class="text-center">¿Quién es Spiderman?</h2>
+    <p class="text-center">Spiderman es uno de los superhéroes más populares del universo Marvel. Su verdadera identidad es Peter Parker, un joven que, tras ser mordido por una araña radiactiva, obtiene habilidades sobrehumanas. A lo largo de los años, diferentes actores han interpretado a Spiderman en la pantalla grande, siendo cada uno de ellos único en su enfoque del personaje.</p>
+</section>
+
+<section>
+    <h2 class="text-center">¿Quiénes interpretaron a Spiderman?</h2>
+    <p class="text-center">Escribe el nombre de uno de los actores que interpretaron a Spiderman en las películas: Tom, Tobey o Andrew.</p>
+    
+    <!-- Formulario interactivo con JavaScript -->
+    <div class="text-center">
+        <div class="form-group">
+            <input type="text" id="actorName" placeholder="Escribe el nombre del actor">
+        </div>
+        <button class="btn btn-primary" onclick="checkActor()">Comprobar Actor</button>
+    </div>
+    <p id="actorResult" class="text-center mt-3"></p>
+</section>
+
+<section class="actor-history">
+    <h3>Tobey Maguire</h3>
+    <p>Tobey Maguire fue el primer actor en interpretar a Peter Parker/Spiderman en el cine. Apareció en la trilogía dirigida por Sam Raimi, que se estrenó entre 2002 y 2007. Su interpretación fue fundamental para el resurgimiento de las películas de superhéroes en Hollywood.</p>
+
+    <h3>Andrew Garfield</h3>
+    <p>Andrew Garfield asumió el papel de Spiderman en la serie "The Amazing Spider-Man", dirigida por Marc Webb. Apareció en dos películas, lanzadas en 2012 y 2014. Su interpretación fue más juvenil y emocional, con un enfoque en la vida personal de Peter Parker.</p>
+
+    <h3>Tom Holland</h3>
+    <p>Tom Holland es el actor más reciente en interpretar a Spiderman en el Universo Cinematográfico de Marvel (MCU). Apareció por primera vez en "Captain America: Civil War" en 2016 y ha sido un elemento clave en las películas de Avengers, así como en sus propias películas de Spiderman.</p>
+</section>
+
+<section class="gallery">
+    <h2 class="text-center">Galería de Imágenes</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+        <img src="tom.jpg" alt="Tom" class="img-thumbnail">
+        <img src="Tobbie.png" alt="Tobey" class="img-thumbnail">
+        <img src="andrew.png" alt="Andrew" class="img-thumbnail">
+    </div>
+</section>
+
+<section>
+    <h2 class="text-center">Top 5 Películas de Spiderman</h2>
+    <ul class="list-group">
+        <li class=strong>Spiderman: No Way Home</strong> - 2021</li>
+        <li class=strong>Spiderman 2</strong> - 2004</li>
+        <li class=strong>Spiderman: Into the Spider-Verse</strong> - 2018</li>
+        <li class=strong>Spiderman: Far From Home</strong> - 2019</li>
+        <li class=strong>Spiderman 3</strong> - 2007</li>
+    </ul>
+</section>
+
+<section class="text-center">
+    <h2>Galería de Trajes de Spiderman</h2>
+    <!-- Carrusel de Imágenes de Spiderman -->
+    <div id="spidermanCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="trajeandrew.jpg" class="d-block w-100" alt="Spiderman 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Traje de Andrew Garfield</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="trajetom.png" class="d-block w-100" alt="Spiderman 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Traje de Tom Holland</h5>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="trajetobbie.png" class="d-block w-100" alt="Spiderman 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Traje de Tobey Maguire</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#spidermanCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#spidermanCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</section>
+
+<footer>
+    <p>Página creada por Kevin Laell Calderon Ramirez.</p>
+    <p><a href="https://www.marvel.com" target="_blank" style="color: #8e2de2;">Sitio oficial de Spiderman</a></p>
+</footer>
+
+<script>
+    // Función de JavaScript para comprobar el actor ingresado
+    function checkActor() {
+        const actorName = document.getElementById('actorName').value.toLowerCase();
+        const result = document.getElementById('actorResult');
+
+        if (actorName === 'tom' || actorName === 'tobey' || actorName === 'andrew') {
+            result.textContent = "¡Correcto! " + actorName.charAt(0).toUpperCase() + actorName.slice(1) + " interpretó a Spiderman.";
+            result.style.color = 'green';
+        } else {
+            result.textContent = "¡Incorrecto! Intenta de nuevo.";
+            result.style.color = 'red';
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
